@@ -9,7 +9,9 @@
   "author": "alatnet",
   "license": "ISC",
   "dependencies": {
+    "connect-sqlite3": "^0.9.11",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "sqlite3": "^4.1.1"
   }
 }
