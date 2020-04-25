@@ -22,7 +22,7 @@ router.get(
 
         var parts = req.query.tile.split('/');
         if (parts.length != 4){
-            res.location('../images/blank.png');
+            res.location('../images/blank.png').send();
             return;
         }
 
@@ -67,7 +67,7 @@ router.get(
             x = parseInt(fparts[0]);
             y = parseInt(fparts[1]);
         } else{
-            res.location('../images/blank.png');
+            res.location('../images/blank.png').send();
             return;
         }
 
@@ -116,7 +116,7 @@ router.get(
 
                     res.send(content);
                 } else {
-                    res.location('../images/blank.png');
+                    res.location('../images/blank.png').send();
                     return;
                 }
             }
