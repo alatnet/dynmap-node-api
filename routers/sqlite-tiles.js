@@ -22,7 +22,7 @@ router.get(
 
         var parts = req.query.tile.split('/');
         if (parts.length != 4){
-            res.send('Location: ../images/blank.png');
+            res.location('../images/blank.png');
             return;
         }
 
@@ -51,7 +51,7 @@ router.get(
         //ignore? no idea where world access var is in php.
         /*if (mapaccess[mapid]){
             ss = stristr(mapaccess[mapid], uid);
-            if (ss === false) res.send('Location: ../images/blank.png');
+            if (ss === false) res.location('../images/blank.png');
         }*/
 
         var fparts = parts[3].split('_');
@@ -67,7 +67,7 @@ router.get(
             x = parseInt(fparts[0]);
             y = parseInt(fparts[1]);
         } else{
-            res.send('Location: ../images/blank.png');
+            res.location('../images/blank.png');
             return;
         }
 
@@ -116,7 +116,7 @@ router.get(
 
                     res.send(content);
                 } else {
-                    res.send('Location: ../images/blank.png');
+                    res.location('../images/blank.png');
                     return;
                 }
             }

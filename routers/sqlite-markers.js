@@ -69,7 +69,7 @@ router.get(
                         res.set({'Content-Type': 'image/png'});
                         res.send(row['Image']);
                     } else {
-                        res.send('Location: ../images/blank.png');
+                        res.location('../images/blank.png');
                         return;
                     }
                 }
@@ -110,7 +110,7 @@ router.get(
                             res.send(row['Image']);
                             return;
                         } else {
-                            res.send('Location: ../images/blank.png');
+                            res.location('../images/blank.png');
                             return;
                         }
                     }
